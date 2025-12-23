@@ -25,10 +25,10 @@ body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial;margin:0;background:var(-
 .project-title{margin:0 0 8px 0}
 .project-desc{color:var(--muted);font-size:0.95rem;margin-bottom:12px}
 .project-tags{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:14px}
-.tag{background:var(--accent1);color:#fff;padding:5px 8px;border-radius:999px;font-size:0.8rem}
-.card-controls{display:flex;gap:10px}
-.launch-btn{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border:none;padding:10px 14px;border-radius:10px;cursor:pointer}
-.open-link{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid rgba(0,0,0,0.08);text-decoration:none;color:var(--text);background:transparent}
+.tag{background:var(--accent1);color:#fff;padding:6px 10px;border-radius:999px;font-size:0.9rem}
+.card-controls{display:flex;gap:12px;align-items:center}
+.launch-btn{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border:none;padding:14px 20px;border-radius:12px;cursor:pointer;font-size:1.02rem;font-weight:600;box-shadow:0 8px 18px rgba(102,126,234,0.18)}
+.open-link{display:inline-block;padding:12px 18px;border-radius:12px;border:1px solid rgba(0,0,0,0.08);text-decoration:none;color:var(--text);background:transparent;font-size:0.98rem}
 
 .site-footer{margin-top:28px;color:var(--muted);text-align:center}
 
@@ -37,7 +37,7 @@ body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial;margin:0;background:var(-
 .modal.open{display:flex}
 .modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,0.6)}
 .modal-content{position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:center}
-.modal-close{position:absolute;right:18px;top:18px;z-index:2;background:rgba(255,255,255,0.9);border:0;padding:8px;border-radius:8px;cursor:pointer}
+.modal-close{position:absolute;right:18px;top:18px;z-index:2;background:rgba(255,255,255,0.95);border:0;padding:12px 12px;border-radius:10px;font-size:1.05rem;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,0.12)}
 .modal iframe{width:100%;height:100%;border:0}
 
 /* Responsive tweaks */
