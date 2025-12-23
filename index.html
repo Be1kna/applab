@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Applab Hub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <div class="title">
+        <h1>Applab Hub</h1>
+        <p class="subtitle">Embedded Code.org Applab projects</p>
+      </div>
+      <div class="actions">
+        <button id="themeToggle" class="theme-toggle">🌙</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="projectsGrid" class="projects-grid">Loading projects…</section>
+    </main>
+
+    <footer class="site-footer">Play projects inline or open in a new tab.</footer>
+  </div>
+
+  <!-- Modal fullscreen -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-content">
+      <button id="modalClose" class="modal-close" aria-label="Close">✕</button>
+      <iframe id="modalIframe" sandbox="allow-scripts allow-forms allow-same-origin" src="" frameborder="0" title="Applab embed"></iframe>
+    </div>
+  </div>
+
+  <script>
+    const projectsFile = 'projects.json';
+
+    // Theme handling
+    const themeToggle = document.getElementById('themeToggle');
+    function getTheme(){return localStorage.getItem('applab_theme')||'light'}
+    function setTheme(t){document.documentElement.setAttribute('data-theme',t); localStorage.setItem('applab_theme',t); themeToggle.textContent = t==='dark'? '☀️':'🌙';}
+    themeToggle.addEventListener('click', ()=> setTheme(getTheme()==='dark'?'light':'dark'));
+    setTheme(getTheme());
+
+    async function loadProjects(){
+      try{
+        const res = await fetch(projectsFile);
+        const list = await res.json();
+        renderGrid(list);
+      }catch(e){
+        document.getElementById('projectsGrid').innerHTML = '<p class="error">Failed to load projects.json</p>';
+        console.error(e);
+      }
+    }
+
+    function renderGrid(list){
+      const grid = document.getElementById('projectsGrid');
+      grid.innerHTML = '';
+      list.forEach(p => {
+        const card = document.createElement('div'); card.className='project-card';
+        card.innerHTML = `
+          <div class="project-icon">${p.icon||'🔗'}</div>
+          <h3 class="project-title">${p.title}</h3>
+          <p class="project-desc">${p.description||''}</p>
+          <div class="project-tags">${(p.tags||[]).slice(0,3).map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+        `;
+
+        const controls = document.createElement('div'); controls.className='card-controls';
+        const startBtn = document.createElement('button'); startBtn.className='launch-btn'; startBtn.textContent='Start';
+        startBtn.addEventListener('click', ()=> openModal(p.embedUrl || p.url));
+        const openLink = document.createElement('a'); openLink.className='open-link'; openLink.textContent='Open'; openLink.href = p.url || '#'; openLink.target = '_blank';
+        controls.appendChild(startBtn); controls.appendChild(openLink);
+        card.appendChild(controls);
+        grid.appendChild(card);
+      });
+    }
+
+    // Modal
+    const modal = document.getElementById('modal');
+    const modalBackdrop = document.getElementById('modalBackdrop');
+    const modalClose = document.getElementById('modalClose');
+    const modalIframe = document.getElementById('modalIframe');
+
+    function openModal(src){
+      if(!src){ alert('No embed URL for this project.'); return; }
+      modalIframe.src = src;
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden','false');
+      document.body.style.overflow='hidden';
+      // make iframe fill viewport via CSS; focus close button for keyboard users
+      modalClose.focus();
+    }
+
+    function closeModal(){
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden','true');
+      modalIframe.src = '';
+      document.body.style.overflow='';
+    }
+
+    modalBackdrop.addEventListener('click', closeModal);
+    modalClose.addEventListener('click', closeModal);
+    window.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeModal(); });
+
+    loadProjects();
+  </script>
+</body>
+</html>
