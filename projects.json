@@ -1,12 +1,39 @@
 [
   {
+    "id": "quantum-apples",
+    "title": "Quantum Apples",
+    "description": "Investigate the principles of quantum using apples!",
+    "icon": "🍎",
+    "url": "https://studio.code.org/projects/applab/ENn9sX7ylQrn5ml5snvdvP8t15xqjXM4ZKdo5lmU5Q8/edit",
+    "embedUrl": "https://studio.code.org/projects/applab/ENn9sX7ylQrn5ml5snvdvP8t15xqjXM4ZKdo5lmU5Q8/embed",
+    "tags": ["game","quantum","apples"]
+  },
+  {
+    "id": "mothers-day",
+    "title": "Happy Mothers Day",
+    "description": "Happy Mothers Day! Know the responsibilities of being a mom.",
+    "icon": "💐",
+    "url": "https://studio.code.org/projects/applab/GQ97eDJ0HN46oK6wtriH0OgHAFNqtPF6cFeQS31WxN0/edit",
+    "embedUrl": "https://studio.code.org/projects/applab/GQ97eDJ0HN46oK6wtriH0OgHAFNqtPF6cFeQS31WxN0/embed",
+    "tags": ["game","mothers day","responsibilities"]
+  },
+  {
+    "id": "color-sleuth",
+    "title": "Color Sleuth",
+    "description": "Choose the different color!",
+    "icon": "🎨",
+    "url": "https://studio.code.org/projects/applab/Di_p0nnk0JPS1thsBYxCrxjnonQir0SMCOqJUEn1bYM/edit",
+    "embedUrl": "https://studio.code.org/projects/applab/Di_p0nnk0JPS1thsBYxCrxjnonQir0SMCOqJUEn1bYM/embed",
+    "tags": ["game","color","difference"]
+  },
+  {
     "id": "quessing-game",
     "title": "Quessing Game",
     "description": "Guess correctly to win!",
     "icon": "🎮",
     "url": "https://studio.code.org/projects/applab/Wd42IWknhufRfSoO0-TTHGhYglg1q5LD1URQwx4M6A4",
     "embedUrl": "https://studio.code.org/projects/applab/Wd42IWknhufRfSoO0-TTHGhYglg1q5LD1URQwx4M6A4/embed",
-    "tags": ["puzzle","game","beginner"]
+    "tags": ["game","quess","luck"]
   },
   {
     "id": "practice-math",
@@ -18,20 +45,13 @@
     "tags": ["practice","math","exercises"]
   },
   {
-    "id": "color-sleuth",
-    "title": "Color Sleuth",
-    "description": "Choose the different color!",
-    "icon": "🎨",
-    "url": "https://studio.code.org/projects/applab/Di_p0nnk0JPS1thsBYxCrxjnonQir0SMCOqJUEn1bYM/edit",
-    "embedUrl": "https://studio.code.org/projects/applab/Di_p0nnk0JPS1thsBYxCrxjnonQir0SMCOqJUEn1bYM/embed"
-  },
-  {
     "id": "mouse-catch",
     "title": "Catch the Mouse",
     "description": "Try to catch the mouse using your mouse!",
     "icon": "🐁",
     "url": "https://studio.code.org/projects/applab/Di_p0nnk0JPS1thsBYxCr_PDhG40Er_jsYEypvO3n0w/edit",
-    "embedUrl": "https://studio.code.org/projects/applab/Di_p0nnk0JPS1thsBYxCr_PDhG40Er_jsYEypvO3n0w/embed"
+    "embedUrl": "https://studio.code.org/projects/applab/Di_p0nnk0JPS1thsBYxCr_PDhG40Er_jsYEypvO3n0w/embed",
+    "tags": ["game","mouse","catch"]
   },
   {
     "id": "mad-libs",
@@ -39,22 +59,7 @@
     "description": "Find out what are the rules of Uno!",
     "icon": "🔠",
     "url": "https://studio.code.org/projects/applab/74rKF4eu5OWdiuoJxpcip1dT-hdXfpIfV66vcxU8WsI/edit",
-    "embedUrl": "https://studio.code.org/projects/applab/74rKF4eu5OWdiuoJxpcip1dT-hdXfpIfV66vcxU8WsI/embed"
-  },
-  {
-    "id": "mothers-day",
-    "title": "Happy Mothers Day",
-    "description": "Happy Mothers Day! Know the responsibilities of being a mom.",
-    "icon": "💐",
-    "url": "https://studio.code.org/projects/applab/GQ97eDJ0HN46oK6wtriH0OgHAFNqtPF6cFeQS31WxN0/edit",
-    "embedUrl": "https://studio.code.org/projects/applab/GQ97eDJ0HN46oK6wtriH0OgHAFNqtPF6cFeQS31WxN0/embed"
-  },
-  {
-    "id": "quantum-apples",
-    "title": "Quantum Apples",
-    "description": "Investigate the principles of quantum using apples!",
-    "icon": "🍎",
-    "url": "https://studio.code.org/projects/applab/ENn9sX7ylQrn5ml5snvdvP8t15xqjXM4ZKdo5lmU5Q8/edit",
-    "embedUrl": "https://studio.code.org/projects/applab/ENn9sX7ylQrn5ml5snvdvP8t15xqjXM4ZKdo5lmU5Q8/embed"
+    "embedUrl": "https://studio.code.org/projects/applab/74rKF4eu5OWdiuoJxpcip1dT-hdXfpIfV66vcxU8WsI/embed",
+    "tags": ["game","mad libs","uno"]
   }
 ]

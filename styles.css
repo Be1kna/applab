@@ -20,7 +20,11 @@ body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial;margin:0;background:var(-
 .theme-toggle{background:transparent;border:1px solid rgba(0,0,0,0.08);padding:8px;border-radius:8px;cursor:pointer}
 
 .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-.project-card{background:var(--card);border-radius:14px;padding:18px;box-shadow:0 8px 30px rgba(5,10,25,0.06);display:flex;flex-direction:column;align-items:center;text-align:center}
+.theme-toggle{background:transparent;border:1px solid rgba(0,0,0,0.08);padding:12px 14px;border-radius:12px;cursor:pointer;font-size:1.05rem;box-shadow:0 6px 18px rgba(102,126,234,0.12);transition:transform .15s ease}
+.theme-toggle:hover{transform:scale(1.06)}
+
+.project-card{background:var(--card);border-radius:14px;padding:18px;border:1px solid rgba(16,24,40,0.04);box-shadow:0 12px 36px rgba(5,10,25,0.09);display:flex;flex-direction:column;align-items:center;text-align:center;transition:transform .18s ease,box-shadow .18s ease}
+.project-card:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(5,10,25,0.14)}
 .project-icon{font-size:40px;margin-bottom:10px}
 .project-title{margin:0 0 8px 0}
 .project-desc{color:var(--muted);font-size:0.95rem;margin-bottom:12px}
